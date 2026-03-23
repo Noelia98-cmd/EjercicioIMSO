@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="windowsPE">
+        <component name="Microsoft-Windows-International-Core-WinPE" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <SetupUILanguage>
+                <UILanguage>es-ES</UILanguage>
+            </SetupUILanguage>
+            <InputLocale>es-ES</InputLocale>
+            <SystemLocale>es-ES</SystemLocale>
+            <UILanguage>es-ES</UILanguage>
+            <UserLocale>es-ES</UserLocale>
+        </component>
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <DiskConfiguration>
+                <Disk wcm:action="add">
+                    <CreatePartitions>
+                        <CreatePartition wcm:action="add">
+                            <Order>1</Order>
+                            <Size>500</Size>
+                            <Type>Primary</Type>
+                        </CreatePartition>
+                        <CreatePartition wcm:action="add">
+                            <Extend>true</Extend>
+                            <Order>2</Order>
+                            <Type>Primary</Type>
+                        </CreatePartition>
+                    </CreatePartitions>
+                    <ModifyPartitions>
+            <ComputerName>Noelia-PC</ComputerName>
+            <TimeZone>Romance Standard Time</TimeZone>
+        </component>
+                <HideLocalAccountScreen>true</HideLocalAccountScreen>
+                <ProtectYourPC>3</ProtectYourPC>
+            </OOBE>
+            <UserAccounts>
+                        <Password>
+                            <Value>Pssw0rd!</Value>
+                            <PlainText>true</PlainText>
+                        </Password>
+                        <Description>Usuario Local</Description>
+                        <DisplayName>Noelia</DisplayName>
+                        <Group>Administrators</Group>
+                        <Name>Noelia</Name>
+                    </LocalAccount>
+                </LocalAccounts>
+            </UserAccounts>
+            <TimeZone>Romance Standard Time</TimeZone>
+        </component>
+    </settings>
+    <cpi:offlineImage cpi:source="wim:c:/windows10iso/sources/install.wim#Windows 10 Pro" xmlns:cpi="urn:schemas-microsoft-com:cpi"/>
+</unattend>
+                <LocalAccounts>
+                    <LocalAccount wcm:action="add">
+                <HideOnlineAccountScreens>true</HideOnlineAccountScreens>
+                <HideWirelessSetupInOOBE>true</HideWirelessSetupInOOBE>
+            <OOBE>
+                <HideEULAPage>true</HideEULAPage>
+    </settings>
+    <settings pass="oobeSystem">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                        <ModifyPartition wcm:action="add">
+                    <InstallImage>
+    <settings pass="specialize">
+        <component name="Microsoft-Windows-Shell-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                <Organization>Practica</Organization>
+            </UserData>
+        </component>
+    </settings>
+                        <ImageName>Windows 10 Pro</ImageName>
+                        <ImageGroup>Windows10</ImageGroup>
+                <AcceptEula>true</AcceptEula>
+                <FullName>Noelia</FullName>
+                        <Filename>install.wim</Filename>
+            </WindowsDeploymentServices>
+            <UserData>
+                    </InstallImage>
+                    <InstallTo>
+                        <DiskID>0</DiskID>
+                        <PartitionID>2</PartitionID>
+                    </InstallTo>
+                </ImageSelection>
+                            <Active>true</Active>
+                            <Format>NTFS</Format>
+                            <Label>Sistema</Label>
+                </Disk>
+                <Login>
+                <ImageSelection>
+                    <Credentials>
+                        <Domain>practica.com</Domain>
+                </Login>
+                        <Password>Pssw0rd!</Password>
+                        <Username>Administrator</Username>
+                    </Credentials>
+            </DiskConfiguration>
+            <WindowsDeploymentServices>
+                            <Order>1</Order>
+                            <PartitionID>1</PartitionID>
+                        </ModifyPartition>
